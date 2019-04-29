@@ -1,0 +1,19 @@
+// Creado el 29/04/2019 por Andrés Rendón <andres.rendon@solex.com.co>
+// Cambios:
+// Primera de cada nombre en Mayuscula
+
+UPPER(
+ LEFT(SPLIT([Nombre_Ciente--minuscula], ' ', 1), 1)
+) +
+RIGHT(SPLIT([Nombre_Ciente--minuscula], ' ', 1),
+  LEN(SPLIT([Nombre_Ciente--minuscula], ' ', 1))-1
+)
+
++ " " +
+
+UPPER(
+  LEFT(SPLIT([Nombre_Ciente--minuscula], ' ', 2), 1)
+) +
+RIGHT(SPLIT([Nombre_Ciente--minuscula], ' ', 2),
+  LEN(SPLIT([Nombre_Ciente--minuscula], ' ', 2))-1
+)
